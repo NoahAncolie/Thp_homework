@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Thp_homework/static/css/main.faf2c732.css",
+    "main.js": "/Thp_homework/static/js/main.a944826c.js",
+    "index.html": "/Thp_homework/index.html",
+    "main.faf2c732.css.map": "/Thp_homework/static/css/main.faf2c732.css.map",
+    "main.a944826c.js.map": "/Thp_homework/static/js/main.a944826c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.faf2c732.css",
+    "static/js/main.a944826c.js"
+  ]
+}
