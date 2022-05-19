@@ -1,0 +1,144 @@
+$dark : black;
+$white : whitesmoke;
+$blue : lightblue;
+
+
+@mixin btn-color($color_main, $color_second) {
+  background-color: $color_main;
+  color: $color_second;
+  border: 2px solid $color_second;
+  border-radius: 3px;
+}
+
+* {
+    margin : 0;
+    padding : 0;
+}
+
+.btn-dark {
+  @include btn-color(blue, whitesmoke);
+}
+
+.btn-light {
+  @include btn-color(whitesmoke, black);
+}
+
+.switch {
+  position: fixed;
+  top: 20px;
+  right: 10px;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    right: 4px;
+    bottom: 4px;
+    background-color: yellow;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: $blue;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px $blue;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(-26px);
+    -ms-transform: translateX(-26px);
+    transform: translateX(-26px) rotate(-90deg);
+    background-color: $dark;
+    animation: upALittle;
+  }
+
+  .navbar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      width: 80%;
+  }
+
+  .outerNav {
+      width: 90vw;
+      padding : 30px 10px;
+  }
+
+  .bg-dark {
+      background-color: $dark;
+      color: $blue;
+  }
+
+  .bg-light {
+      background-color: $white;
+      color: $dark;
+  }
+
+  .a-dark:link, .a-dark:visited {
+    color : $white;
+    text-decoration: none;
+  }
+
+  .a-light:link, .a-light:visited {
+    color : $dark;
+    text-decoration: none;
+  }
+
+  .a-dark:hover, .a-dark:active {
+    color : $blue;
+  }
+
+  .a-light:hover, .a-light:active{
+    color : $blue;
+  }
+
+  .text-dark {
+    color: $white;
+  }
+
+  .text-light {
+    color: $dark;
+  }
+
+  .background {
+    height : 100vh;
+  }
+
+  .work-card {
+    width : 30vw; 
+    height : 40vh;
+    margin : 10px;
+  }
+
+  .enterprise {
+    padding : 10px 30px;
+    border-radius : 3px;
+    margin : 5px;
+    display : block;
+  }
